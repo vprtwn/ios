@@ -172,6 +172,7 @@ Use `guard` to transfer control out of scope if a condition is not met.
 **For example:**
 ```swift
 guard let location = person["location"] else { return }
+doSomething(location)
 ```
 
 **Not:**
@@ -180,6 +181,7 @@ let location = person["location"]
 if location == nil { 
   return 
 }
+doSomething(location!)
 ```
 
 #### Avoid global constants
