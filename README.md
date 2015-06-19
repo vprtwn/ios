@@ -16,16 +16,15 @@ Instead, use an `if let`:
 
 ```swift
 if let foo = foo {
-    // Use unwrapped `foo` value in here
+  // Use unwrapped `foo` value in here
 } else {
-    // If appropriate, handle the case where the optional is nil
+  // If appropriate, handle the case where the optional is nil
 }
 ```
 
 Or use optional chaining:
 
 ```swift
-// Call the function if `foo` is not nil. If `foo` is nil, ignore we ever tried to make the call
 foo?.callSomethingIfFooIsNotNil()
 ```
 
@@ -45,26 +44,26 @@ read-only subscripts.
 **For example:**
 ```swift
 var myGreatProperty: Int {
-	return 4
+  return 4
 }
 
 subscript(index: Int) -> T {
-    return objects[index]
+  return objects[index]
 }
 ```
 
 **Not:**
 ```swift
 var myGreatProperty: Int {
-	get {
-		return 4
-	}
+  get {
+    return 4
+  }
 }
 
 subscript(index: Int) -> T {
-    get {
-        return objects[index]
-    }
+  get {
+    return objects[index]
+  }
 }
 ```
 
@@ -82,7 +81,7 @@ However, definitions within those can leave access control implicit, where appro
 
 ```swift
 internal struct TheFez {
-	var owner: Person = Joshaber()
+  var owner: Person = Joshaber()
 }
 ```
 
@@ -114,11 +113,11 @@ When accessing properties or methods on `self`, leave the reference to `self` im
 
 ```swift
 private class History {
-	var events: [Event]
+  var events: [Event]
 
-	func rewrite() {
-		events = []
-	}
+  func rewrite() {
+    events = []
+  }
 }
 ```
 
@@ -126,15 +125,15 @@ Only include the explicit keyword when required by the language—for example, i
 
 ```swift
 extension History {
-	init(events: [Event]) {
-		self.events = events
-	}
+  init(events: [Event]) {
+    self.events = events
+  }
 
-	var whenVictorious: () -> () {
-		return {
-			self.rewrite()
-		}
-	}
+  var whenVictorious: () -> () {
+    return {
+      self.rewrite()
+    }
+  }
 }
 ```
 
@@ -149,7 +148,7 @@ _Rationale:_
   * Note that a `private` declaration allows the compiler to infer the `final` keyword.
 
 #### Prefer composition over inheritance
-Use protocols instead of subclassing where possible. 
+Use protocols instead of subclassing where possible. Remember to use protocol extensions and default protocol implementations where appropriate.
 
 _Rationale:_
 * Classes provide implicit sharing, which is often undesirable. 
