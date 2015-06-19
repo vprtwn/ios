@@ -166,9 +166,6 @@ Using a class may make sense when:
 * instance lifetime is tied to external effects (e.g. TemporaryFile)
 * instances are just "sinks" – write-only conduits to external state (e.g. CGContext)
 
-##### Value types should always implement `Equatable`
-_Rationale:_ By definition, value types should be equatable by value.
-
 #### Use `guard` instead of `if` for early exits
 Use `guard` to transfer control out of scope if a condition is not met.
 
