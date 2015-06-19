@@ -1,6 +1,6 @@
 # Swift Style Guide
 
-#### Prefer `let`-bindings over `var`-bindings wherever possible
+#### Prefer `let` over `var` wherever possible
 
 Use `let foo = …` over `var foo = …` wherever possible (and when in doubt). Only use `var` if you absolutely have to (i.e. you *know* that the value might change, e.g. when using the `weak` storage modifier).
 
@@ -309,5 +309,5 @@ func processSale(json: AnyObject) throws {
 
 ## References
 * [Github's Swift Style Guide](https://github.com/github/swift-style-guide).
-* WWDC 2015
+* [WWDC 2015](https://developer.apple.com/videos/wwdc/2015/)
 
