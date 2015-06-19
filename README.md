@@ -305,6 +305,6 @@ func processSale(json: AnyObject) throws {
 ```
 
 ## References
-* [Github's Swift Style Guide](https://github.com/github/swift-style-guide).
+* [Github's Swift Style Guide](https://github.com/github/swift-style-guide)
 * [WWDC 2015](https://developer.apple.com/videos/wwdc/2015/)
 
