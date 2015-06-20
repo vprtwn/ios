@@ -200,7 +200,7 @@ extension UIImage {
 let image = UIImage(assetIdentifier: .Isabella)
 ```
 
-Rationale:
+_Rationale_:
 * strongly-typed > stringly-typed
 * doesn't pollute global namespace
 * compiler enforces uniqueness of enum cases
